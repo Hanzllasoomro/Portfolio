@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="text-xl font-bold text-white">
-          Hanzlla.dev
+          Hanzlla Soomro
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
