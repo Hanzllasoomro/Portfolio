@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';

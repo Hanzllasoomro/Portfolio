@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/progress";
 import { motion } from "framer-motion";
 
