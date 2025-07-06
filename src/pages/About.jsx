@@ -134,10 +134,25 @@ export default function About() {
             className="p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-500 shadow-md"
           >
             <h3 className="font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
-              Front-End Developer – Meta
+              Software Engineer Intern - HackerRank
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">Issued: June 2024</p>
-            <a href="#" className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block">
+            <p className="text-slate-600 dark:text-slate-400 text-sm">Issued: July 2025</p>
+            <a href="https://www.hackerrank.com/certificates/iframe/c365095f557c" className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block">
+              View Certificate
+            </a>
+          </motion.div>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-4 mt-4">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-500 shadow-md"
+          >
+            <h3 className="font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
+              Software Engineer – HackerRank
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 text-sm">Issued: July 2025</p>
+            <a href="https://www.hackerrank.com/certificates/iframe/853e246eeb7d" className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block">
               View Certificate
             </a>
           </motion.div>
