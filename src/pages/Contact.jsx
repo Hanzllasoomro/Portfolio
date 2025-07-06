@@ -6,7 +6,7 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 export default function Contact() {
   return (
-    <section className="relative py-16 px-6 sm:px-10 md:px-20 text-slate-300 min-h-screen">
+    <section className="relative py-16 px-6 sm:px-10 md:px-20 transition-colors duration-500 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 min-h-screen">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute bottom-10 right-10 h-40 w-40 bg-pink-500 opacity-20 blur-3xl rounded-full animate-pulse" />
@@ -30,6 +30,7 @@ export default function Contact() {
         </Canvas>
       </div>
 
+      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,6 +41,7 @@ export default function Contact() {
         Contact Me
       </motion.h2>
 
+      {/* Form */}
       <motion.form
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -56,43 +58,50 @@ export default function Contact() {
           autoComplete="off"
         />
         <div>
-          <label className="block text-sm mb-1" htmlFor="name">Name</label>
+          <label className="block text-sm mb-1" htmlFor="name">
+            Name
+          </label>
           <input
             type="text"
             id="name"
             name="name"
-            className="w-full p-3 bg-slate-800 rounded-lg border border-slate-700 text-white"
+            className="w-full p-3 rounded-lg border text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-700 transition-colors duration-500"
             placeholder="Your name"
             required
           />
         </div>
         <div>
-          <label className="block text-sm mb-1" htmlFor="email">Email</label>
+          <label className="block text-sm mb-1" htmlFor="email">
+            Email
+          </label>
           <input
             type="email"
             id="email"
             name="email"
-            className="w-full p-3 bg-slate-800 rounded-lg border border-slate-700 text-white"
+            className="w-full p-3 rounded-lg border text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-700 transition-colors duration-500"
             placeholder="you@example.com"
             required
           />
         </div>
         <div>
-          <label className="block text-sm mb-1" htmlFor="message">Message</label>
+          <label className="block text-sm mb-1" htmlFor="message">
+            Message
+          </label>
           <textarea
             id="message"
             name="message"
-            rows="5"
-            className="w-full p-3 bg-slate-800 rounded-lg border border-slate-700 text-white"
+            rows={5}
+            className="w-full p-3 rounded-lg border text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800 border-slate-300 dark:border-slate-700 transition-colors duration-500"
             placeholder="How can I help you?"
             required
-          ></textarea>
+          />
         </div>
         <Button type="submit" className="w-full sm:w-auto">
           Send Message
         </Button>
       </motion.form>
 
+      {/* Social Icons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -100,15 +109,29 @@ export default function Contact() {
         transition={{ delay: 0.8 }}
         className="mt-16 text-center"
       >
-        <p className="text-slate-400 mb-4">Or find me on</p>
-        <div className="flex justify-center gap-6 text-slate-400">
-          <a href="mailto:you@example.com" className="hover:text-white transition-colors" title="Email">
+        <p className="text-slate-500 dark:text-slate-400 mb-4">Or find me on</p>
+        <div className="flex justify-center gap-6 text-slate-500 dark:text-slate-400 transition-colors duration-500">
+          <a
+            href="mailto:you@example.com"
+            className="hover:text-pink-500 transition-colors duration-300"
+            title="Email"
+          >
             <Mail size={24} />
           </a>
-          <a href="https://github.com/Hanzllasoomro" target="_blank" className="hover:text-white transition-colors" title="GitHub">
+          <a
+            href="https://github.com/Hanzllasoomro"
+            target="_blank"
+            className="hover:text-pink-500 transition-colors duration-300"
+            title="GitHub"
+          >
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" className="hover:text-white transition-colors" title="LinkedIn">
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            className="hover:text-pink-500 transition-colors duration-300"
+            title="LinkedIn"
+          >
             <Linkedin size={24} />
           </a>
         </div>

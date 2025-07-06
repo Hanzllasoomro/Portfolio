@@ -17,7 +17,7 @@ const allProjects = [
   },
   {
     title: "Admin Dashboard",
-    image: "https://i.imgur.com/mvxUZzC.png", // Keep remote if no local file
+    image: "https://i.imgur.com/mvxUZzC.png",
     tags: ["React", "Chart.js"],
     link: "https://example.com",
   },
@@ -66,7 +66,8 @@ const tagOptions = [
   "Security",
   "DevOps",
   "Linux",
-  "Virtualization",];
+  "Virtualization",
+];
 
 export default function Projects() {
   const [activeTag, setActiveTag] = useState("All");
@@ -77,22 +78,28 @@ export default function Projects() {
       : allProjects.filter((p) => p.tags.includes(activeTag));
 
   return (
-    <section className="px-6 py-16 sm:px-10 md:px-20 text-slate-300">
+    <section className="px-6 py-16 sm:px-10 md:px-20 transition-colors duration-500 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200">
+      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl sm:text-4xl font-bold mb-8 text-center"
+        className="text-3xl sm:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text"
       >
         My Projects
       </motion.h2>
 
+      {/* Tag Filters */}
       <div className="flex flex-wrap gap-3 justify-center mb-10">
         {tagOptions.map((tag, i) => (
           <Badge
             key={i}
             variant={activeTag === tag ? "outline" : "secondary"}
-            className="cursor-pointer"
+            className={`cursor-pointer transition-colors duration-300 ${
+              activeTag === tag
+                ? "border-blue-500 text-blue-500 dark:text-blue-400"
+                : "text-slate-800 dark:text-slate-300 bg-slate-200 dark:bg-slate-700"
+            }`}
             onClick={() => setActiveTag(tag)}
           >
             {tag}
@@ -100,6 +107,7 @@ export default function Projects() {
         ))}
       </div>
 
+      {/* Project Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((project, i) => (
           <motion.a
@@ -109,19 +117,26 @@ export default function Projects() {
             key={i}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.2 }}
-            className="group bg-slate-800 hover:bg-slate-700 rounded-xl overflow-hidden shadow-lg transition-all"
+            transition={{ delay: i * 0.1 }}
+            className="group rounded-xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-500"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-slate-100">{project.title}</h3>
-              <div className="flex flex-wrap gap-2 mt-2">
+              <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                {project.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, idx) => (
-                  <Badge key={idx}>{tag}</Badge>
+                  <Badge
+                    key={idx}
+                    className="text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-700 transition-all duration-300"
+                  >
+                    {tag}
+                  </Badge>
                 ))}
               </div>
             </div>
