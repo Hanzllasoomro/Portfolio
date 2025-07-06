@@ -46,7 +46,7 @@ export default function Resume() {
       </motion.h2>
 
       <div className="flex justify-center mb-10">
-        <a href="/resume.pdf" download>
+        <a href="https://drive.google.com/file/d/1W1lwIz01CZmc6B3O9wS3mc3b40k0B4R_/view?usp=drive_link" download>
           <Button className="gap-2">
             <Download size={18} /> Download PDF
           </Button>

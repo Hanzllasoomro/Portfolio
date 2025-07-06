@@ -5,15 +5,15 @@ import { Badge } from "@/components/ui/Badge";
 const allProjects = [
   {
     title: "Portfolio Website",
-    image: "/images/portfolio.png",
+    image: "https://drive.google.com/file/d/10yrqVlqYAJeYsm4u11I73Eu5M76zJvSG/view?usp=drive_link",
     tags: ["React", "TailwindCSS"],
-    link: "https://example.com",
+    link: "https://hanzllasoomro.vercel.app/",
   },
   {
     title: "E-Commerce App",
-    image: "/images/ecommerce.png",
+    image: "https://drive.google.com/file/d/1OMyjga4dyVS4ObW1D-YZIdeSB8nLuRx6/view?usp=sharing",
     tags: ["React", "Firebase"],
-    link: "https://example.com",
+    link: "https://www.hyperemporium.co.site/",
   },
   {
     title: "Admin Dashboard",
@@ -23,7 +23,7 @@ const allProjects = [
   },
   {
     title: "Hybrid Network Services Deployment",
-    image: "/images/project1.png",
+    image: "https://drive.google.com/file/d/1LSEy1gVuens8W61AwnhaiEt1zh-ag8Rb/view?usp=sharing",
     tags: ["Networking", "Linux", "Security"],
     link: "#",
   },
@@ -41,13 +41,13 @@ const allProjects = [
   },
   {
     title: "Uber Clone",
-    image: "/images/project4.png",
+    image: "https://drive.google.com/file/d/1Q_V_Zh1icNYviK3GJvef7JSMh3ZPhrOo/view?usp=sharing",
     tags: ["React", "Node.js", "Client-Server"],
     link: "#",
   },
   {
     title: "Airbnb Clone",
-    image: "/images/project5.png",
+    image: "https://drive.google.com/file/d/1Sj33gikAKvRl9JincEYcV-EGxAGITiMP/view?usp=sharing",
     tags: ["React", "Node.js", "Client-Server"],
     link: "#",
   },
