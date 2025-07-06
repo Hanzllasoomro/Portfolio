@@ -5,49 +5,49 @@ import { Badge } from "@/components/ui/Badge";
 const allProjects = [
   {
     title: "Portfolio Website",
-    image: "https://drive.google.com/file/d/10yrqVlqYAJeYsm4u11I73Eu5M76zJvSG/view?usp=drive_link",
+    image: "/images/portfolio.png",
     tags: ["React", "TailwindCSS"],
     link: "https://hanzllasoomro.vercel.app/",
   },
   {
     title: "E-Commerce App",
-    image: "https://drive.google.com/file/d/1OMyjga4dyVS4ObW1D-YZIdeSB8nLuRx6/view?usp=sharing",
+    image: "/images/ecommerce.png",
     tags: ["React", "Firebase"],
     link: "https://www.hyperemporium.co.site/",
   },
   {
     title: "Admin Dashboard",
-    image: "/images/dashboard.png",
+    image: "https://i.imgur.com/mvxUZzC.png", // Keep remote if no local file
     tags: ["React", "Chart.js"],
     link: "https://example.com",
   },
   {
     title: "Hybrid Network Services Deployment",
-    image: "https://drive.google.com/file/d/1LSEy1gVuens8W61AwnhaiEt1zh-ag8Rb/view?usp=sharing",
+    image: "/images/HNS.avif",
     tags: ["Networking", "Linux", "Security"],
     link: "#",
   },
   {
     title: "Secure Multi-Service Lab",
-    image: "/images/project2.png",
+    image: "/images/Overall-architecture-of-the-ReLOAD-remote-operated-lab-system-showing-connections-of.png",
     tags: ["Virtualization", "DevOps", "Security"],
     link: "#",
   },
   {
     title: "Markshadows (Ecommerce Website)",
-    image: "/images/project3.png",
+    image: "https://i.imgur.com/hAKRczG.png",
     tags: ["React", "Node.js", "MongoDB"],
     link: "#",
   },
   {
     title: "Uber Clone",
-    image: "https://drive.google.com/file/d/1Q_V_Zh1icNYviK3GJvef7JSMh3ZPhrOo/view?usp=sharing",
+    image: "/images/uber.png",
     tags: ["React", "Node.js", "Client-Server"],
     link: "#",
   },
   {
     title: "Airbnb Clone",
-    image: "https://drive.google.com/file/d/1Sj33gikAKvRl9JincEYcV-EGxAGITiMP/view?usp=sharing",
+    image: "/images/airbnb.png",
     tags: ["React", "Node.js", "Client-Server"],
     link: "#",
   },

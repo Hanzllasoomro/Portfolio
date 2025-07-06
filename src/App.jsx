@@ -5,7 +5,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects.jsx";
-import Resumes from "./pages/Resumes";
+import Resume from "./pages/Resume";
 import Contact from "./pages/Contact.jsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -21,7 +21,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/resumes" element={<Resumes />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
