@@ -4,6 +4,14 @@ import { Download, Code, Github, Briefcase, Network } from "lucide-react";
 
 const resumeItems = [
   {
+    title: "Full Stack Developer",
+    icon: <Code size={24} className="text-blue-500 dark:text-blue-400" />,
+    company: "DSDIGITALS - Remote (Germany)",
+    date: "Jun 2025 - Sep 2025",
+    description:
+      "As a Full Stack Developer at DSDigitals, I work on designing, developing, and deploying high-performance web applications using modern technologies. My role involves building dynamic and responsive user interfaces with Next.js, React, and Tailwind CSS, developing RESTful APIs with Node.js and Express, and managing databases using MongoDB and MySQL. I collaborate with designers and backend teams to implement new features, improve scalability, and enhance overall user experience. I also maintain CI/CD pipelines, participate in code reviews, and follow agile development practices to ensure efficient and reliable software delivery.",
+  },
+  {
     title: "Full Stack Developer Intern",
     icon: <Code size={24} className="text-blue-500 dark:text-blue-400" />,
     company: "Tech Innovators",
@@ -62,9 +70,10 @@ export default function Resume() {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="max-w-3xl mx-auto text-center text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed"
       >
-        I bring a versatile blend of frontend and backend skills, a strong open-source ethic,
-        and a passion for efficient, scalable systems. Whether it's crafting pixel-perfect UIs
-        or automating deployments, I love turning ideas into polished, production-ready solutions.
+        I bring a versatile blend of frontend and backend skills, a strong
+        open-source ethic, and a passion for efficient, scalable systems.
+        Whether it's crafting pixel-perfect UIs or automating deployments, I
+        love turning ideas into polished, production-ready solutions.
       </motion.p>
 
       {/* Resume Download */}
@@ -74,7 +83,11 @@ export default function Resume() {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="flex justify-center mb-14"
       >
-        <a href="/resumes/hanzlla-resume.pdf" download aria-label="Download Resume PDF">
+        <a
+          href="/resumes/hanzlla-resume.pdf"
+          download
+          aria-label="Download Resume PDF"
+        >
           <Button className="gap-2 px-6 py-3 text-base hover:scale-105 transition-transform duration-300">
             <Download size={18} />
             Download Resume
@@ -96,10 +109,13 @@ export default function Resume() {
           >
             <div className="flex items-center gap-3 mb-2">
               {item.icon}
-              <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 dark:text-slate-100">{item.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold text-slate-800 dark:text-slate-100">
+                {item.title}
+              </h3>
             </div>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-              <span className="font-medium">{item.company}</span> — <i>{item.date}</i>
+              <span className="font-medium">{item.company}</span> —{" "}
+              <i>{item.date}</i>
             </p>
             <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
               {item.description}
