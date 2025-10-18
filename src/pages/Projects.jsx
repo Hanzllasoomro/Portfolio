@@ -4,10 +4,20 @@ import { Badge } from "@/components/ui/Badge";
 
 const allProjects = [
   {
-    title: "Portfolio Website",
-    image: "/images/portfolio.png",
-    tags: ["React", "TailwindCSS"],
-    link: "https://hanzllasoomro.vercel.app/",
+    title: "QuickAI",
+    image: "/images/CodeHouse AI.png",
+    tags: ["PERN", "Google Generative AI", "Clipdrop", "Vercel"],
+    link: "https://quicker-ai.vercel.app/",
+    description:
+      "AI-powered content generation platform using PostgreSQL, Express, React, and Node.js with RESTful APIs and scalable architecture for seamless text and image creation.",
+  },
+  {
+    title: "Semester-Tools",
+    image: "/images/Semester Tools.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "HTML-to-Image"],
+    link: "https://semester-tools.vercel.app/",
+    description:
+      "A modern utility suite built with Next.js 15 featuring tools like Tweet-to-Image converter, JPEG compression, QR generator with logo overlay, and color palette extractor.",
   },
   {
     title: "E-Commerce App",
@@ -22,23 +32,12 @@ const allProjects = [
     link: "https://example.com",
   },
   {
-    title: "Hybrid Network Services Deployment",
-    image: "/images/HNS.avif",
-    tags: ["Networking", "Linux", "Security"],
-    link: "#",
-  },
-  {
-    title: "Secure Multi-Service Lab",
-    image: "/images/Overall-architecture-of-the-ReLOAD-remote-operated-lab-system-showing-connections-of.png",
-    tags: ["Virtualization", "DevOps", "Security"],
-    link: "#",
-  },
-  {
     title: "Markshadows (Ecommerce Website)",
     image: "https://i.imgur.com/hAKRczG.png",
     tags: ["React", "Node.js", "MongoDB"],
     link: "#",
   },
+  
   {
     title: "Uber Clone",
     image: "/images/uber.png",
@@ -51,13 +50,27 @@ const allProjects = [
     tags: ["React", "Node.js", "Client-Server"],
     link: "#",
   },
+  {
+    title: "Hybrid Network Services Deployment",
+    image: "/images/HNS.avif",
+    tags: ["Networking", "Linux", "Security"],
+    link: "#",
+  },
+  {
+    title: "Secure Multi-Service Lab",
+    image:
+      "/images/Overall-architecture-of-the-ReLOAD-remote-operated-lab-system-showing-connections-of.png",
+    tags: ["Virtualization", "DevOps", "Security"],
+    link: "#",
+  },
+  
 ];
 
 const tagOptions = [
   "All",
-  "React", 
-  "TailwindCSS", 
-  "Firebase", 
+  "React",
+  "TailwindCSS",
+  "Firebase",
   "Chart.js",
   "Node.js",
   "MongoDB",
@@ -67,6 +80,15 @@ const tagOptions = [
   "DevOps",
   "Linux",
   "Virtualization",
+  "Next.js",
+  "TypeScript",
+  "AceternityUI",
+  "i18n",
+  "Socket.io",
+  "WebRTC",
+  "PERN",
+  "Google Generative AI",
+  "Clipdrop",
 ];
 
 export default function Projects() {
@@ -129,6 +151,11 @@ export default function Projects() {
               <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 mb-2">
                 {project.title}
               </h3>
+              {project.description && (
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                  {project.description}
+                </p>
+              )}
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, idx) => (
                   <Badge
