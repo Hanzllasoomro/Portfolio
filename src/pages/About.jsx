@@ -19,20 +19,70 @@ export default function About() {
       institution: "Mehran UET, Jamshoro",
       degree: "BE in Software Engineering",
       year: "01/2026 (Expected)",
-      detail: "Focused on systems design, software engineering principles, and modern development practices.",
+      detail:
+        "Focused on systems design, software engineering principles, and modern development practices.",
     },
     {
       institution: "Rashid Minhas Higher Secondary School, Alipur",
       degree: "Certificate of Higher Education (Matriculation)",
       year: "05/2019",
-      detail: "Strong academic base with emphasis on science and math subjects.",
+      detail:
+        "Strong academic base with emphasis on science and math subjects.",
     },
     {
       institution: "Rashid Minhas Higher Secondary School, Alipur",
       degree: "Pre-Engineering",
       year: "08/2021",
-      detail: "Specialized in physics and mathematics for a foundation in engineering.",
+      detail:
+        "Specialized in physics and mathematics for a foundation in engineering.",
     },
+  ];
+
+  const certifications = [
+    {
+      title: "Software Engineer – HackerRank",
+      issuer: "HackerRank",
+      date: "July 2025",
+      link: "https://www.hackerrank.com/certificates/iframe/853e246eeb7d",
+    },
+    {
+      title:"SQL INJECTION DEFENSE : SECURE APPS LIKE A PRO",
+      issuer: "Google Devloper Group (DevTown)",
+      date: "Aug 2025",
+      link: "https://cert.devtown.in/verify/Z2wnUse",
+    },
+    {
+      title:" Linux Essentials",
+      issuer: "CISCO",
+      date: "Aug 2025",
+      link: "https://www.credly.com/badges/b764bdaf-26d1-4e34-abb4-7a838c0b47db ",
+    },
+    {
+      title:"SQL INJECTION DEFENSE : SECURE APPS LIKE A PRO",
+      issuer: "Microsoft Student Chapter - MSIT (DevTown)",
+      date: "Aug 2025",
+      link: "https://www.cert.devtown.in/verify/1ybRYS",
+    },
+    {
+      title:"Tableau - Data Visualization",
+      issuer: "SLillEcted",
+      date: "May 2025",
+      link: "https://skillected.graphy.com/share-certificate?serialno=GH48DSDZ",
+    },
+    
+    {
+      title: "SQL (Advanced)",
+      issuer: "HackerRank",
+      date: "July 2025",
+      link: "https://www.hackerrank.com/certificates/iframe/afdf7bf1eaf9",
+    },
+    {
+      title: "Software Engineer Intern - HackerRank",
+      issuer: "HackerRank",
+      date: "July 2025",
+      link: "https://www.hackerrank.com/certificates/iframe/c365095f557c",
+    },
+    
   ];
 
   return (
@@ -54,7 +104,9 @@ export default function About() {
 
       {/* Education */}
       <div>
-        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">🎓 Education</h2>
+        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">
+          🎓 Education
+        </h2>
         <div className="space-y-6">
           {education.map((edu, i) => (
             <motion.div
@@ -71,7 +123,9 @@ export default function About() {
               <p className="text-sm text-slate-600 dark:text-slate-400">
                 {edu.institution} — <i>{edu.year}</i>
               </p>
-              <p className="text-slate-500 dark:text-slate-400 mt-1">{edu.detail}</p>
+              <p className="text-slate-500 dark:text-slate-400 mt-1">
+                {edu.detail}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -79,7 +133,9 @@ export default function About() {
 
       {/* Skills */}
       <div>
-        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">🛠️ Skills</h2>
+        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">
+          🛠️ Skills
+        </h2>
         <div className="space-y-4">
           {skills.map((skill, i) => (
             <motion.div
@@ -93,7 +149,10 @@ export default function About() {
                 <span>{skill.name}</span>
                 <span>{skill.level}%</span>
               </div>
-              <Progress value={skill.level} className="h-2 bg-slate-300 dark:bg-slate-700 transition-colors duration-500" />
+              <Progress
+                value={skill.level}
+                className="h-2 bg-slate-300 dark:bg-slate-700 transition-colors duration-500"
+              />
             </motion.div>
           ))}
         </div>
@@ -101,7 +160,9 @@ export default function About() {
 
       {/* Tools & Tech */}
       <div>
-        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">🧰 Tools & Technologies</h2>
+        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">
+          🧰 Tools & Technologies
+        </h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,8 +171,18 @@ export default function About() {
           className="flex flex-wrap gap-3"
         >
           {[
-            "React", "JavaScript", "TailwindCSS", "Node.js", "MongoDB", "Git", "GitHub",
-            "Figma", "REST APIs", "Firebase", "Linux", "CI/CD"
+            "React",
+            "JavaScript",
+            "TailwindCSS",
+            "Node.js",
+            "MongoDB",
+            "Git",
+            "GitHub",
+            "Figma",
+            "REST APIs",
+            "Firebase",
+            "Linux",
+            "CI/CD",
           ].map((tool, i) => (
             <Badge
               key={i}
@@ -126,39 +197,35 @@ export default function About() {
 
       {/* Certifications */}
       <div>
-        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">📜 Certifications</h2>
+        <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4 transition-colors duration-500">
+          📜 Certifications
+        </h2>
         <div className="grid sm:grid-cols-2 gap-4">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-500 shadow-md"
-          >
-            <h3 className="font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
-              Software Engineer Intern - HackerRank
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">Issued: July 2025</p>
-            <a href="https://www.hackerrank.com/certificates/iframe/c365095f557c" className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block">
-              View Certificate
-            </a>
-          </motion.div>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4 mt-4">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            className="p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-500 shadow-md"
-          >
-            <h3 className="font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
-              Software Engineer – HackerRank
-            </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm">Issued: July 2025</p>
-            <a href="https://www.hackerrank.com/certificates/iframe/853e246eeb7d" className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block">
-              View Certificate
-            </a>
-          </motion.div>
+          {certifications.map((cert, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="p-4 border border-slate-300 dark:border-slate-700 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-500 shadow-md"
+            >
+              <h3 className="font-semibold bg-gradient-to-r from-sky-400 to-purple-500 bg-clip-text text-transparent">
+                {cert.title}
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
+                Issued by {cert.issuer} — {cert.date}
+              </p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-400 underline text-sm mt-2 inline-block"
+              >
+                View Certificate
+              </a>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
-
   );
 }
